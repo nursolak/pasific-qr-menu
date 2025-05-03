@@ -17,23 +17,21 @@ const Home = () => {
         backgroundColor: "#f7f7f7",
         textAlign: "center",
         px: 2,
-        overflow: "hidden", // Scrollu engeller
-        width: "100%", // Sağ kaymayı engellemek için width'i %100 yapıyoruz
-        margin: 0, // Margin'in dışarı taşmaması için sıfırlama
-        boxSizing: "border-box", // Padding'in genişliği etkilememesi için
+        overflow: "hidden", 
+        width: "100%", 
+        margin: 0, 
+        boxSizing: "border-box", 
       }}
     >
-      {/* Logo */}
       <Box
         component="img"
         src={logo}
         alt="Logo"
         sx={{
-          width: { xs: "40%", sm: "160px" }, // Logo boyutları mobilde küçük
+          width: { xs: "40%", sm: "160px" }, 
           mb: 5,
         }}
       />
-
       <Box
         display="flex"
         flexDirection={{ xs: "column", sm: "row" }}
@@ -47,7 +45,7 @@ const Home = () => {
           variant="h4"
           sx={{
             fontWeight: "bold",
-            fontSize: { xs: "2rem", sm: "2.5rem" },
+            fontSize: { xs: "2.25rem", sm: "2.5rem" },
             background:
               "linear-gradient(90deg, rgba(26, 33, 71, 1) 0%, rgba(70, 105, 90, 1) 100%)",
             WebkitBackgroundClip: "text",
@@ -55,14 +53,14 @@ const Home = () => {
             textShadow: "1px 1px 2px rgba(0,0,0,0.1)",
           }}
         >
-          Pasific Tekne Turuna
+          Welcome to the
         </Typography>
 
         <Typography
           variant="h4"
           sx={{
             fontWeight: "bold",
-            fontSize: { xs: "2rem", sm: "2.5rem" },
+            fontSize: { xs: "2.3rem", sm: "2.5rem" },
             background:
               "linear-gradient(90deg, rgba(26, 33, 71, 1) 0%, rgba(70, 105, 90, 1) 100%)",
             WebkitBackgroundClip: "text",
@@ -70,7 +68,7 @@ const Home = () => {
             textShadow: "1px 1px 2px rgba(0,0,0,0.1)",
           }}
         >
-          Hoş Geldiniz
+          Pasific Boat Tour
         </Typography>
       </Box>
 
@@ -83,12 +81,12 @@ const Home = () => {
           px: 4,
           py: 1.5,
           width: '280px',
-          fontSize: { xs: "1rem", sm: "1.2rem" }, // Buton boyutları mobilde küçülür
+          fontSize: { xs: "1rem", sm: "1.2rem" }, 
           borderRadius: "999px",
           textTransform: "none",
         }}
       >
-        Menüyü Görüntüle
+        View to Menu
       </Button>
     </Box>
   );

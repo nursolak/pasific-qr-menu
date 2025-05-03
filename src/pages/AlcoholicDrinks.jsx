@@ -1,17 +1,16 @@
 import React from "react";
-import { Box, Typography, Card, CardMedia, CardContent } from "@mui/material";
+import { Box, Typography, Card, CardContent } from "@mui/material";
 import alcoholicDrinks from "../data/alcoholicDrinks";
 
 const AlcoholicDrinks = () => {
   return (
     <Box sx={{ px: 2, py: 4, backgroundColor: "#f7f7f7", minHeight: "100vh" }}>
       <Typography
-        variant="h4"
         align="center"
         gutterBottom
-        sx={{ fontWeight: "bold", color: "#1a2147", mb: 4 }}
+        sx={{ fontWeight: "bold", fontSize: "2rem", color: "#1a2147", mb: 3 }}
       >
-        Alkollü İçecekler
+        Alcoholic Beverages
       </Typography>
 
       {alcoholicDrinks.map((item) => (
@@ -19,7 +18,7 @@ const AlcoholicDrinks = () => {
           key={item.id}
           sx={{
             background: "linear-gradient(90deg, rgba(26, 33, 71, 1) 0%, rgba(70, 105, 90, 1) 100%)",
-            color:"#fff",
+            color: "#fff",
             display: "flex",
             alignItems: "center",
             mb: 3,
@@ -30,24 +29,20 @@ const AlcoholicDrinks = () => {
             py: 1,
           }}
         >
-          {/* Kokteyl görseli */}
-          <CardMedia
-            component="img"
-            image={item.image}
-            alt={item.name}
+          <Box
             sx={{
               width: 90,
               height: 90,
               borderRadius: "18px",
-              objectFit: "cover",
+              backgroundImage: `url(${item.image})`,
+              backgroundSize: "120%", 
+              backgroundPosition: "50% 90%",
+              backgroundRepeat: "no-repeat",
               mr: 2,
               ml: 1,
-              mt: 1,
-              mb: 1,
             }}
           />
 
-          {/* Ad & İçerik */}
           <CardContent sx={{ flex: 1, p: 1 }}>
             <Typography variant="h6" sx={{ fontWeight: "bold", fontSize: "1rem" }}>
               {item.name}
@@ -57,7 +52,6 @@ const AlcoholicDrinks = () => {
             </Typography>
           </CardContent>
 
-          {/* Fiyat */}
           <Typography
             variant="subtitle1"
             sx={{

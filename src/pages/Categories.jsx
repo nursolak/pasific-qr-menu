@@ -8,19 +8,19 @@ import snacksImage from "../assets/snacks.jpeg";
 const categories = [
   {
     id: 1,
-    name: "Alkollü İçecekler",
+    name: "Alcoholic Beverages",
     path: "/drinks/alcoholic",
     image: alcoholImage,
   },
   {
     id: 2,
-    name: "Alkolsüz İçecekler",
+    name: "Non-Alcoholic Beverages",
     path: "/drinks/non-alcoholic",
     image: nonAlcoholImage,
   },
   {
     id: 3,
-    name: "Aperatifler",
+    name: "Special Delights",
     path: "/drinks/snacks",
     image: snacksImage,
   },
@@ -49,7 +49,7 @@ const Categories = () => {
         sx={{
           fontWeight: "bold",
           mb: 3,
-          fontSize: "1.4rem", // default: <400px
+          fontSize: "1.9rem", // default: <400px
           "@media (min-width:400px)": {
             fontSize: "2rem", // 400px–699px
           },
@@ -58,7 +58,7 @@ const Categories = () => {
           },
         }}
       >
-        Ürünlerimiz
+        Our Selection
       </Typography>
 
       <Grid container spacing={3} justifyContent="center">
@@ -85,20 +85,15 @@ const Categories = () => {
                 alt={category.name}
                 sx={{
                   width: "100%",
-                  height: "160px",
+                  height: "150px",
                   objectFit: "cover",
                   display: "block",
-                  "@media (max-width: 500px)": {
-                    height: "170px",
-                  },
-                  "@media (max-width: 350px)": {
-                    height: "150px",
-                  },
+                  
                 }}
               />
               <Box
                 sx={{
-                  p: { xs: 1.5, sm: 2 },
+                  p: 2,
                   background:
                     "linear-gradient(90deg, rgba(26, 33, 71, 1) 0%, rgba(70, 105, 90, 1) 100%)",
                   color: "#fff",
@@ -109,7 +104,7 @@ const Categories = () => {
                   align="center"
                   sx={{
                     fontWeight: "500",
-                    fontSize: { xs: "1rem", sm: "1.1rem" },
+                    fontSize: "1.2rem",
                   }}
                 >
                   {category.name}
